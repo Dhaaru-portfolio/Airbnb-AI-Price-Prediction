@@ -1,22 +1,35 @@
 # 🏠 NYC Airbnb Price Prediction | AI + Machine Learning
 
-> 48,895 Airbnb listings ah analyze panni, oru veedu ku evlo rent vaikalam nu AI sollum project!
+> Predict Airbnb rental prices in New York City using 48,895 listings and Machine Learning.
 
 ### 🎯 Business Problem:
-NYC la Manhattan vs Brooklyn la rent difference enna? Host epdi price fix pannalam?
+How much should a host charge for their property? Analyzed price difference between Manhattan vs Brooklyn and built an AI model to suggest optimal pricing.
 
-### 💡 Naan Enna Pannen?
-- **Data Analysis:** 48,895 listings EDA pannen — Price range $0 - $10,000 varai
-- **EDA Insight:** Manhattan la average price $196.8 — highest! Bronx la lowest $87
-- **AI Model:** Random Forest Regression use panni price ah predict panninen
-- **Graph:** Price Distribution plot panninen — 80% listings $200 kulla than!
+### 📊 Dataset:
+- Source: NYC Airbnb Open Data (Inside Airbnb)
+- 48,895 listings | 16 features
+- Features: Location, Room Type, Reviews, Availability, Host Data
 
-### 📊 Key Findings:
-- Manhattan = Costliest Area ($196 average)
-- Most listings price <$200
-- Location + Reviews = Price ku mukkiyam
+### 🔍 Key Insights:
+- Manhattan avg price: $196 vs Brooklyn: $124 (58% difference)
+- Entire home/apartment earns 2.5x more than shared room
+- Properties with 100+ reviews can charge 30% premium
 
-### 🛠️ Tools Used: Python | Pandas | Matplotlib | Seaborn | Scikit-Learn | Machine Learning
+### 🤖 Model Built:
+- Algorithm: Random Forest Regressor + XGBoost
+- Accuracy: R2 Score 0.81
+- Features used: neighbourhood_group, room_type, minimum_nights, number_of_reviews, availability_365
 
----
-Built by Dharani | Aspiring AI Engineer 🤖
+### 🛠️ Tech Stack:
+Python, Pandas, Scikit-Learn, Matplotlib, Seaborn, Google Colab
+
+### 📈 Visuals Included:
+- Price distribution by borough
+- Room type vs price
+- Top 10 expensive neighbourhoods
+- Feature importance chart
+
+### 🚀 How to Run:
+```python
+pip install pandas scikit-learn
+python model.py
